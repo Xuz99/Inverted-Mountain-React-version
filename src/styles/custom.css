@@ -1,0 +1,146 @@
+/* This file is for your main application css. */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
+a {
+  cursor: pointer;
+}
+body{
+  background-color:  #1A1A1A;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color:#999999FF;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.font-in-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #999999FF;
+
+}
+
+.font-in-blue {
+  color: #46A4DEFF;
+}
+
+.font-in-green {
+  color: #72D472;
+}
+
+.font-in-white {
+  color:  #CCC;
+}
+
+.font-in-red {
+  color: #B54949;
+}
+
+.font-in-blue {
+  color: #48A8E0;
+}
+
+.font-in-border-blue {
+  border-color: #48A8E0;
+}
+
+.font-in-subtitle-blue {
+  color: rgba(72,168,224,0.5);
+}
+
+.font-in-input-pink {
+  color: #E62D96;
+}
+
+
+.border-in-grey {
+  border-color: #444444;
+}
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.inmount-line-through {
+  text-decoration: solid line-through;
+  text-decoration-color: #D943AA;
+  text-decoration-thickness: 50px;
+}
+
+input::selection  {
+  background-color: red;
+}
+
+li {
+  list-style: none; 
+}
+
+
+.all-ties-down {
+  color: #4CFFC4;
+  font-style: italic;
+  background: radial-gradient(circle, #FFA13C 1%, #934747 100%);
+}
+
+.i-love-you {
+  color: #E62D96;
+  font-style: italic;
+  background-color: #111;
+  padding: 15px;
+  letter-spacing: 7px;
+}
+
+
+/* Alerts and form errors */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert:empty {
+  display: none;
+}
