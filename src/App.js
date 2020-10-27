@@ -11,21 +11,14 @@ import Newsletter from './components/Newsletter';
 class App extends Component {
   render(){
     return (
-          <Fragment>
-            <Header/>
-            <Navbar/>
-            <section className="mx-5 flex-auto max-w-full mx-10 xl:mx-64">
-              <LandingPage/>
-            </section>
-            <section className="mx-5 flex-auto max-w-full mx-10 xl:mx-64">
-              <Play/>
-            </section>
-            <section className="mx-5 flex-auto max-w-full mx-10 xl:mx-64">
-              <Newsletter />
-            </section>
-          </Fragment>
-        ) 
-      
+      <Fragment>
+        <Header/>
+        <Navbar/>
+        <LandingPage/>
+        <Play/>
+        <Newsletter/>
+      </Fragment>
+    ) 
   }
 }
 
