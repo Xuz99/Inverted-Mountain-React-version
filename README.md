@@ -1,3 +1,11 @@
+# Inverted Mountain // React verson
+## psyche-delicious games that will rock your unconscious!
+
+This project is a remake of a Elixir/Phoenix app that you can find [here](https://github.com/mkubera/inmount_umbrella)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
