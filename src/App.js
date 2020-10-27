@@ -12,13 +12,13 @@ class App extends Component {
   render(){
     return (
       <Fragment>
-        <Header/>
-        <Navbar/>
-        <LandingPage/>
-        <Play/>
-        <Newsletter/>
+      <Header/>
+      <Navbar/>
+      <LandingPage/>
+      <Play/>
+      <Newsletter/>
       </Fragment>
-    ) 
+      ) 
   }
 }
 
