@@ -24,6 +24,11 @@ h3 {
   font-weight: 400;
 }
 
+.nav-bg-gradient {
+  background: linear-gradient(180deg, #72D472 0%, #47A7E2 100%, #FFF 100%);
+
+}
+
 .font-in-subtitle {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -89,7 +94,7 @@ h3 {
 .inmount-line-through {
   text-decoration: solid line-through;
   text-decoration-color: #D943AA;
-  text-decoration-thickness: 50px;
+  text-decoration-thickness: 4px;
 }
 
 input::selection  {
@@ -99,7 +104,6 @@ input::selection  {
 li {
   list-style: none; 
 }
-
 
 .all-ties-down {
   color: #4CFFC4;

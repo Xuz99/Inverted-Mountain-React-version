@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import Play from './components/Play';
 import Newsletter from './components/Newsletter';
+import Listen from './components/Listen';
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
       <LandingPage/>
       <Play/>
       <Newsletter/>
+      <Listen/>
       </Fragment>
       ) 
   }
