@@ -5,8 +5,10 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import Play from './components/Play';
-import Newsletter from './components/Newsletter';
+// import Newsletter from './components/Newsletter';
 import Listen from './components/Listen';
+import Connect from './components/Connect';
+import Footer from './components/Footer';
 
 
 class App extends Component {
@@ -17,8 +19,10 @@ class App extends Component {
       <Navbar/>
       <LandingPage/>
       <Play/>
-      <Newsletter/>
+      {/* <Newsletter/> */}
       <Listen/>
+      <Connect/>
+      <Footer/>
       </Fragment>
       ) 
   }

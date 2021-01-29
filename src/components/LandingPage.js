@@ -11,7 +11,7 @@ const LandingPage = () =>  (
 		<h3 className="text-lg xl:text-4xl uppercase font-in-white fw-300 tracking-track-01 mb-5">Desktop/Browser</h3>
 		<h2 className="text-sm xl:text-2xl uppercase font-in-blue lato fw-400">Influences</h2>
 
-		<ui className="text-lg xl:text-4xl uppercase text-center font-in-white  fw-300 tracking-tiny-wide">
+		<div className="text-lg xl:text-4xl uppercase text-center font-in-white  fw-300 tracking-tiny-wide">
 			<li className="hover:text-green-500">
 				<a href="https://en.wikipedia.org/wiki/William_Blake" target="_blank" rel="noopener noreferrer">W. Blake</a>
 			</li>
@@ -36,7 +36,7 @@ const LandingPage = () =>  (
 				<a href="https://elmjapan.org/" target="_blank" rel="noopener noreferrer">F. P. of the 2020<span className="lowercase">s</span>
 				</a>
 			</li>
-		</ui>
+		</div>
 	
 	</section>
 	)
