@@ -1,89 +1,60 @@
-import React, {Component, Fragment} from 'react';
-import newletter_image from '../images/staytuned.png';
-import dots_image from '../images/dots.png';
+import React, {Fragment} from 'react';
+import axios from 'axios';
+import Form, { Input, useValidation, useForm } from "usetheform";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import newletter_image from '../images/staytuned.png';
+import dots_image from '../images/dots.png';
 
-const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+const FormStyle = "text-center max-w-full xl:mx-20";
+const labelErrStyle = "alert-danger p-3 m-3 rounded";
+const inputStyle = "appearance-none mt-5 text-md md:text-2xl fw-300 text-center font-in-input-pink w-4/5 px-3 py-1 xl:p-5 mb-10 focus:outline-none focus:bg-gray-800 bg-gray-800 rounded-full font-in-border-blue border-4 tracking-widest";
+const buttonStyle = "hover:bg-blue-300 hover:text-white xl:text-5xl text-2xl text-blue-400 tracking-track-02 xl:px-8 px-4 py-2 mx-auto mb-10 -my-5 text-center lato fw-700 font-in-border-blue border-2 cursor-pointer";
 
-const validateForm = errors => {
-	let valid = true;
-	Object.values(errors).forEach(
-	  // if we have an error string set valid to false
-	  val => val.length > 0 && (valid = false)
-	);
-	return valid;
-  };
 
-class Newsletter extends Component  {
-	constructor(props) {
-		super(props);
-		
-		this.state = {email: null, errors: {email: "",}};
- 
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
+const isValidEmail = value =>
+    !(value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value))
+        ? undefined
+        : 'Email is not valid. Please try again.'
 
-	
+const requried =  value => value && value.trim() !== '' ? undefined : 'Requried *'
 
-	handleChange = event => {
-		event.preventDefault();
-		const { name, value } = event.target;
-		let errors = this.state.errors; 
+const Newsletter  = () => {
+	const [statusInput, validationAttrInput] = useValidation([requried, isValidEmail]);
+	const customId = "custom-id-yes";
 
-		switch (name) {
-		  case "email":
-			errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
-			break;
-		  default:
-			break;
-		}
-		this.setState({ errors, [name]: value });
-	  };
+	const EmailCatch = (value) => {
+        if (useValidation) {
+            console.info("Valid Form");
+            const email = JSON.parse(JSON.stringify(value.email));
+            let config = {
+                headers: {
+                    'accept': 'application/json',
+                    'content-type': 'application/json',
+                }
+            }
+            axios.post('https://webhook.site/54845475-247c-457a-be6e-6a82e3a9a50d', email, config)
+            .then(response => {
+                console.log('Result', response)
+				toast.success('Thank you for joining our newsletter! \n\nEmail submited: ' + value.email, {
+					toastId: customId
+				});
+            })
+            .catch(error => {
+                console.log('Error', error)
+				toast.error('This email was not added to the newletter list. Please try again. \n\n Or contact us at \n\n earthlings@inverted-mountain.com');
+            })
+        } else {
+        console.error("Invalid Form");
+		toast.error('This email was not added to the newletter list. Please try again. \n\n Or contact us at \n\n earthlings@inverted-mountain.com');
+        }
+    }
+		const contextClass = {
+			success: "bg-blue-400",
+			error: "bg-red-600",
+		  };
 
-	handleSubmit = event => {
-		event.preventDefault();
-		if (validateForm(this.state.errors)) {
-			
-		  toast.success('Thank you for joining our newsletter! \n\nEmail submited: ' + this.state.email + '\n\nThis email will not be added to the newletter system');
-		  console.info("Valid Form");
-			async postEmail() {
-				try {
-					const emailCatch = this.state
-		
-					let result = await fetch('https://webhook.site/54845475-247c-457a-be6e-6a82e3a9a50d', {
-						method: 'post',
-						mode: 'no-cors',
-						headers: {
-							'Accept': 'application/json',
-							'Content-type': 'application/json',
-						},
-						body: JSON.stringify({
-							email: emailCatch
-						})
-					});
-		
-					console.log('Result', result)
-		
-				} catch(error) {
-					console.log(error)
-					toast.error('This email was not added to the newletter list. Please try again. Or contact us at ...');
-				}
-		
-			};
-		} else {
-		  console.error("Invalid Form");
-		}
-	  };
-
-	  
-
-	
-
-	render() {
-		const { errors } = this.state;
 		return(
 			<Fragment>
 			<section className="mt-56 border font-in-border-blue border-current xl:mx-64 mx-1">
@@ -95,46 +66,39 @@ class Newsletter extends Component  {
 				</div>
 
 				<ToastContainer 
-					position="top-center"
-					autoClose={5000}
-					hideProgressBar={true}
-					newestOnTop={false}
-					closeOnClick
-					rtl={false}
-					pauseOnFocusLoss
-					draggable
-					pauseOnHover
-					toastClassName={() => "whitespace-pre-line bg-blue-400 flex p-3 min-h-10 lato fw-400 font-in-border-blue border-2 rounded-md justify-between cursor-pointer"}
-					bodyClassName={() => "text-xl w-full font-white p-3"}
-					/>
+				position="top-center"
+				autoClose={5000}
+				hideProgressBar={true}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				toastClassName={({ type }) => contextClass[type || "default"] + " whitespace-pre-line flex p-3 min-h-10 lato fw-400 rounded-md justify-between cursor-pointer"}
+				bodyClassName={() => "text-xl w-full font-white p-3"}
+				/>
 
-				<form noValidate className="text-center max-w-full xl:mx-20"
-				onSubmit={this.handleSubmit}>
-					
-				{errors.email.length > 0 && (
-					<label htmlfor="email" className="alert-danger p-3 m-3 rounded">{errors.email}</label>
-				)}
-					
-
-				<input className="appearance-none mt-5 text-md md:text-2xl fw-300 text-center font-in-input-pink w-4/5 px-3 py-1 xl:p-5 mb-10 focus:outline-none focus:bg-gray-800 bg-gray-800 rounded-full font-in-border-blue border-4 tracking-widest" 
-				id="emailCatch" 
-				type="email" 
-				name="email" 
-				placeholder="enter your email here"
-				onChange={this.handleChange}
-				noValidate
-				></input>
-
-				<button className="hover:bg-blue-300 hover:text-white xl:text-5xl text-2xl text-blue-400 tracking-track-02 xl:px-8 px-4 py-2 mx-auto mb-10 -my-5 text-center lato fw-700 font-in-border-blue border-2 cursor-pointer" 
-				id="SubmitBtn">SUBSCRIBE</button>
-				</form>
-
+				<Form className={FormStyle} initialState={{ email: '' }} onSubmit={(state) => EmailCatch(state)}>
+					{statusInput.error && <label className={labelErrStyle}>{statusInput.error}</label>}
+					<Input placeholder="enter your email here" className={inputStyle} type="text" name="email" touched {...validationAttrInput} />
+	
+					<Submit />
+				</Form>
 			</section>
 			</Fragment>
 			)
 		 	//End of return
-		 }
- 		//End of render
- 	}
+		}
+
+const Submit = (value) => {
+	const { isValid } = useForm();
+	return (
+		<button className={buttonStyle} disabled={!isValid} type="submit" 
+				id="SubmitBtn">
+				SUBSCRIBE
+		</button>	
+		)
+};
  	
- 	export default Newsletter;
+export default Newsletter;
