@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import axios from 'axios';
 import Form, { Input, useValidation, useForm } from "usetheform";
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import newletter_image from '../images/staytuned.png';
 import dots_image from '../images/dots.png';
 
-const FormStyle = "text-center max-w-full xl:mx-20";
+const formStyle = "text-center max-w-full xl:mx-20";
 const labelErrStyle = "alert-danger p-3 m-3 rounded";
 const inputStyle = "appearance-none mt-5 text-md md:text-2xl fw-300 text-center font-in-input-pink w-4/5 px-3 py-1 xl:p-5 mb-10 focus:outline-none focus:bg-gray-800 bg-gray-800 rounded-full font-in-border-blue border-4 tracking-widest";
 const buttonStyle = "hover:bg-blue-300 hover:text-white xl:text-5xl text-2xl text-blue-400 tracking-track-02 xl:px-8 px-4 py-2 mx-auto mb-10 -my-5 text-center lato fw-700 font-in-border-blue border-2 cursor-pointer";
@@ -79,7 +79,7 @@ const Newsletter  = () => {
 				bodyClassName={() => "text-xl w-full font-white p-3"}
 				/>
 
-				<Form className={FormStyle} initialState={{ email: '' }} onSubmit={(state) => EmailCatch(state)}>
+				<Form className={formStyle} initialState={{ email: '' }} onSubmit={(state) => EmailCatch(state)}>
 					{statusInput.error && <label className={labelErrStyle}>{statusInput.error}</label>}
 					<Input placeholder="enter your email here" className={inputStyle} type="text" name="email" touched {...validationAttrInput} />
 	
