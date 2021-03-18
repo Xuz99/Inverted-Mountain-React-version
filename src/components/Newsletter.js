@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Form, { Input, useValidation, useForm } from "usetheform";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -31,36 +31,47 @@ const Newsletter = () => {
 
   const EmailCatch = (value) => {
     if (useValidation) {
-      console.info("Valid Form");
-      const email = JSON.parse(JSON.stringify(value.email));
-      let config = {
-        headers: {
-          accept: "application/json",
-          "content-type": "application/json",
-        },
-      };
-      axios
-        .post(
-          "https://webhook.site/dc368bb3-8f2d-432c-ac40-7b2bc3739b73",
-          email,
-          config
-        )
-        .then((response) => {
-          console.log("Result", response);
-          toast.success(
-            "Thank you for joining our newsletter! \n\nEmail submited: " +
-              value.email,
-            {
-              toastId: customId,
-            }
-          );
-        })
-        .catch((error) => {
-          console.log("Error", error);
-          toast.error(
-            "This email was not added to the newletter list. Please try again. \n\n Or contact us at \n\n earthlings@inverted-mountain.com"
-          );
-        });
+      console.info(
+        "This is a live demo, your email has not been submited:",
+        value.email
+      );
+      toast.success(
+        "Thank you for joining our newsletter! \n\nEmail submited: " +
+          value.email +
+          "\n\nThis is a live demo, your email has not been submited check the console to see the capture.",
+        {
+          toastId: customId,
+        }
+      );
+      // const email = JSON.parse(JSON.stringify(value.email));
+      // let config = {
+      //   headers: {
+      //     accept: "application/json",
+      //     "content-type": "application/json",
+      //   },
+      // };
+      // axios
+      //   .post(
+      //     "https://webhook.site/dc368bb3-8f2d-432c-ac40-7b2bc3739b73",
+      //     email,
+      //     config
+      //   )
+      //   .then((response) => {
+      //     console.log("Result", response);
+      //     toast.success(
+      //       "Thank you for joining our newsletter! \n\nEmail submited: " +
+      //         value.email,
+      //       {
+      //         toastId: customId,
+      //       }
+      //     );
+      //   })
+      //   .catch((error) => {
+      //     console.log("Error", error);
+      //     toast.error(
+      //       "This email was not added to the newletter list. Please try again. \n\n Or contact us at \n\n earthlings@inverted-mountain.com"
+      //     );
+      //   });
     } else {
       console.error("Invalid Form");
       toast.error(
