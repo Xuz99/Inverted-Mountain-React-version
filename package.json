@@ -12,6 +12,7 @@
     "react-scripts": "^2.0.5",
     "react-toastify": "^6.2.0",
     "styled-components": "^5.2.1",
+    "tailwindcss": "^1.9.6",
     "usetheform": "^3.4.0",
     "wavesurfer.js": "^4.6.0"
   },
@@ -39,9 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
+    "postcss": "^7.0.35"
   }
 }

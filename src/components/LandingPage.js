@@ -1,17 +1,17 @@
 import React from 'react'
 
 const LandingPage = () =>  (
-	<section className="flex-auto max-w-full mx-10 text-white text-center xsm:p-5 xsm:mt-5 leading-5 xl:leading-tight">
+	<section className="text-white text-center xsm:p-5 xsm:mt-5 leading-5 md:leading-tight">
 
-		<h2 className="text-sm xl:text-2xl uppercase font-in-blue lato fw-400 ">Founded</h2>
-		<h3 className="text-lg xl:text-4xl uppercase font-in-white fw-300 tracking-track-01 mb-5">Summer of <span className="inmount-line-through">love</span> 2020</h3>	
-		<h2 className="text-sm xl:text-2xl uppercase font-in-blue lato fw-400">Locations</h2>
-		<h3 className="text-lg xl:text-4xl uppercase font-in-white fw-300 tracking-track-01 mb-5">Poland/Scotland</h3>
-		<h2 className="text-sm xl:text-2xl uppercase font-in-blue lato fw-400">Gaming Platforms</h2>
-		<h3 className="text-lg xl:text-4xl uppercase font-in-white fw-300 tracking-track-01 mb-5">Desktop/Browser</h3>
-		<h2 className="text-sm xl:text-2xl uppercase font-in-blue lato fw-400">Influences</h2>
+		<h2 className="text-sm md:text-2xl uppercase font-in-blue lato fw-300 ">Founded</h2>
+		<h3 className="text-lg md:text-4xl uppercase font-in-white fw-400 tracking-track-01 mb-5">Summer of <span className="inmount-line-through">love</span> 2020</h3>	
+		<h2 className="text-sm md:text-2xl uppercase font-in-blue lato fw-300">Locations</h2>
+		<h3 className="text-lg md:text-4xl uppercase font-in-white fw-400 tracking-track-01 mb-5">Poland/Scotland</h3>
+		<h2 className="text-sm md:text-2xl uppercase font-in-blue lato fw-300">Gaming Platforms</h2>
+		<h3 className="text-lg md:text-4xl uppercase font-in-white fw-400 tracking-track-01 mb-5">Desktop/Browser</h3>
+		<h2 className="text-sm md:text-2xl uppercase font-in-blue lato fw-300">Influences</h2>
 
-		<div className="text-lg xl:text-4xl uppercase text-center font-in-white  fw-300 tracking-tiny-wide">
+		<div className="text-lg xl:text-4xl uppercase text-center font-in-white fw-400 tracking-track-01">
 			<li className="hover:text-green-500">
 				<a href="https://en.wikipedia.org/wiki/William_Blake" target="_blank" rel="noopener noreferrer">W. Blake</a>
 			</li>
