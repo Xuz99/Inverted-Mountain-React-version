@@ -1,17 +1,16 @@
 ![Inverted Mountain logo](invertedmountain_logo.png "Inverted Mountain logo")
 # Inverted Mountain // React version
 ###### psyche-delicious games that will rock your unconscious!
-### Codebase for indie games studio website, inVERTed mOUNTAIn
 
-This project is a remake of a Elixir/Phoenix app that you can find [here](https://github.com/mkubera/inmount_umbrella)
+This repo is holds the codebase for indie games studio website, inVERTed mOUNTAIn.
 
-### [Live demo]()
+### [Live demo](inmountapp.johndavidson.dev)
 
 ## Stack:
 
 * HTML5
 * CSS
-* [Tailwind CSS](https://tailwindcss.com/)
+* [Tailwind CSS 1.9.6](https://tailwindcss.com/)
 * [PostCSS](https://postcss.org/)
 * This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
