@@ -6,7 +6,7 @@ import placeholder_image_three from '../images/bg-placeholder-three.svg';
 
 const subheading_clases = "font-in-red text-md text-left xl:text-4xl";
 const text_clases = "xl:text-2xl leading-7 tracking-track-01 mb-8";
-const image_heading_clases = "text-4xl text-center text-white mt-12 leading-none tracking-tiny-wide uppercase lato fw-400 break-words";
+const image_heading_clases = "text-4xl text-center text-white mt-12 leading-none tracking-track-02 uppercase lato fw-400 break-words";
 const image_subheading_clases = "font-in-red text-md text-center xxl:text-4xl mb-5";
 const image_clases = "border-8 border-in-grey shadow-lg";
 

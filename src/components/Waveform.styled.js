@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WaveformContianer = styled.div`
-  margin-top: -82px;
+  margin-top: -50px;
   position: relative;
   align-items: center;
   justify-content: center;

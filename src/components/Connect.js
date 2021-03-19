@@ -8,14 +8,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function copyText() {
-  const textToCopy = "earthlings@inverted-mountain.com";
+  const textToCopy = "earthlings@invertedmounta.in";
   navigator.clipboard.writeText(textToCopy);
   toast.success("Coppied to clipboard \n\n" + textToCopy);
 }
 
 const contextClass = {
-  success: "bg-blue-400",
-  error: "bg-red-600",
+  success: "bg-green-400",
 };
 
 const Connect = () => (
@@ -38,7 +37,7 @@ const Connect = () => (
     />
     <h1
       id="connect"
-      className="text-4xl xl:text-6xl text-center text-white p-8 leading-none tracking-widest uppercase lato fw-400"
+      className="text-4xl xl:text-6xl text-center text-white p-8 leading-none tracking-track-02 uppercase lato fw-400"
     >
       connect
     </h1>
@@ -47,9 +46,21 @@ const Connect = () => (
       <br />
       Shoot us an email
       <br />
+     
+    </p>
+
+    <p className="text-yellow-600 text-xl md:text-5xl text-center mt-5 mb-20 tracking-tight">
+      <a href="mailto:earthlings@invertedmounta.in" target="_top">
+        earthlings
+        <span>
+          <br />@<br />
+        </span>
+        invertedmounta.in
+      </a>
+      <br/>
       <button
         onClick={() => copyText()}
-        className="hover:bg-red-300 xl:px-1 px-1 py-1 text-center lato fw-700 border-red-500 border-2 cursor-pointer"
+        className="hover:bg-red-300 xl:px-1 px-1 py-1 mx-auto border-red-500 border-2 cursor-pointer"
       >
         <img
           className="mx-auto"
@@ -60,16 +71,7 @@ const Connect = () => (
         ></img>
       </button>
     </p>
-
-    <p className="text-yellow-600 text-xl md:text-5xl text-center mt-5 mb-20 tracking-tight">
-      <a href="mailto:earthlings@inverted-mountain.com" target="_top">
-        earthlings
-        <span>
-          <br />@<br />
-        </span>
-        inverted-mountain.com
-      </a>
-    </p>
+    
 
     <p className="uppercase text-md md:text-2xl text-gray-600 text-center tracking-widest italic">
       follow us on social media

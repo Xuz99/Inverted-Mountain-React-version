@@ -8,10 +8,10 @@ const dummy_text =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...";
 
 const Listen = () => (
-  <section className="text-white mt-32 mx-5 sm:mx-32 md:mx-64">
+  <section className="text-white mt-32 mx-5 sm:mx-32 lg:mx-64">
     <h1
       id="listen"
-      className="text-4xl xl:text-6xl text-center text-white p-8 leading-none tracking-widest uppercase lato fw-400"
+      className="text-4xl xl:text-6xl text-center text-white p-8 leading-none tracking-track-02 uppercase lato fw-400"
     >
       listen
     </h1>

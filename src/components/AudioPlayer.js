@@ -73,14 +73,14 @@ class AudioPlayer extends Component {
       <section className="my-10 text-white bg-gray-900 rounded shadow-lg">
         <div className="p-0 text-center md:text-left font-in-border-blue border-l-2 h-full">
           <div className="grid grid-cols-2 gap-2">
-            <div className="p-5">
-              <h3 className="md:text-4xl text-xl font-bold text-green-400 uppercase tracking-mad-wide">
+            <div className="md:p-5 p-2">
+              <h3 className="md:text-4xl text-xl font-bold text-green-400 uppercase md:tracking-track-01">
                 {this.props.title}
               </h3>
               <h2 className="md:text-2xl text-lg text-green-300 fw-300">
-                {this.props.episodeNo} | {this.props.date}
+                {this.props.episodeNo} <br/> {this.props.date}
               </h2>
-              <p className="md:text-3xl text-lg italic text-gray-500 tracking-track-01 my-10">
+              <p className="md:text-3xl text-sm italic text-gray-500 tracking-track-01 md:my-10">
                 {this.props.description}
               </p>
             </div>

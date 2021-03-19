@@ -10,13 +10,13 @@ const all_ties_down_text = (`Equipped with a black tie and a white collar shirt,
   unconscious begins...`)
 
 const Play = () =>  (
-  <section className="text-white mt-32 mx-5">
+  <section className="text-white mx-5 mt-56">
     <header>
-      <h1 id="play" className="text-4xl xl:text-6xl text-center text-white p-8 leading-none tracking-widest uppercase lato fw-400">
+      <h1 id="play" className="text-4xl xl:text-6xl text-center text-white p-8 leading-none tracking-track-02  uppercase lato fw-400">
         play
       </h1>
     </header>
-    <section className="xl:max-w-full xl:mx-64 xl:mb-48 lato fw-300 text-gray-400">
+    <section className="sm:max-w-full md:mx-32 md:mb-48  lato fw-300 text-gray-400">
         <Game title={"All\n Ties\n Down!"}
         year_of_release="Work in progress. We plan to release the early access version around X-mas 2020." 
         genres="Exploration turn-based mystery story-driven female-character counter-cultural" 
@@ -27,7 +27,7 @@ const Play = () =>  (
         <Game title="I LOVE YOU, THEREFORE I NEED YOU TO DIE...AGAIN"
         year_of_release="2020, Christmas" 
         genres="Story-driven metaphysical shamanic" 
-        what_its_all_about="Description..." 
+        what_its_all_about="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..." 
         custom_class="i-love-you"
         showImages={false}/>
     </section>
