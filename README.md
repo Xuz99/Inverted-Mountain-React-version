@@ -4,7 +4,7 @@
 
 This repo is holds the codebase for indie games studio website, inVERTed mOUNTAIn.
 
-### [Live demo](inmountapp.johndavidson.dev)
+### [Live demo](inmountapp.surge.sh)
 
 ## Stack:
 
