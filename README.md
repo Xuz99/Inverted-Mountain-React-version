@@ -4,13 +4,13 @@
 
 This repo is holds the codebase for indie games studio website, inVERTed mOUNTAIn.
 
-### [Live demo](inmountapp.surge.sh)
+### [Live demo](https://inmountapp.surge.sh/)
 
 ## Stack:
 
 * HTML5
 * CSS
-* [Tailwind CSS 1.9.6](https://tailwindcss.com/)
+* [Tailwind CSS](https://tailwindcss.com/)
 * [PostCSS](https://postcss.org/)
 * This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
